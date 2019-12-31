@@ -1,3 +1,5 @@
+[![Docker Automated build](https://img.shields.io/docker/cloud/automated/sighery/archbuilder?style=for-the-badge)](https://hub.docker.com/r/sighery/archbuilder)
+
 # Builder image based in Arch Linux
 
 This is a Docker image, based, and pretty close to the Docker Arch Linux latest
