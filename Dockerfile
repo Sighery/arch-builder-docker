@@ -1,4 +1,4 @@
-FROM archlinux:20191205
+FROM archlinux:20200106
 
 RUN pacman -Sy
 RUN pacman -S --needed --noconfirm sudo
