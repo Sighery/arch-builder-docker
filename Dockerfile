@@ -1,6 +1,7 @@
 FROM archlinux:20200106
 
 RUN pacman -Sy
+RUN pacman -S --needed --noconfirm archlinux-keyring
 RUN pacman -S --needed --noconfirm sudo
 RUN pacman -S --needed --noconfirm base-devel
 
