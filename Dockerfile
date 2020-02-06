@@ -1,4 +1,4 @@
-FROM archlinux:20200106
+FROM archlinux:20200205
 
 RUN pacman -Sy
 RUN pacman -S --needed --noconfirm archlinux-keyring
