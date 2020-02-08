@@ -1,4 +1,6 @@
-[![Docker Automated build](https://img.shields.io/docker/cloud/automated/sighery/archbuilder?style=for-the-badge)](https://hub.docker.com/r/sighery/archbuilder)
+[![Actions Main
+Build](https://img.shields.io/github/workflow/status/sighery/arch-builder-docker/Main?logo=github&style=for-the-badge)](https://github.com/Sighery/arch-builder-docker/actions)
+[![Docker](https://img.shields.io/static/v1?logo=docker&label=Docker&message=Automated&color=informational&style=for-the-badge)](https://hub.docker.com/r/sighery/archbuilder)
 
 # Builder image based in Arch Linux
 
