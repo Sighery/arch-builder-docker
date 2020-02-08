@@ -1,0 +1,33 @@
+name: Main
+
+env:
+  IMAGE_NAME: sighery/archbuilder
+
+on: [push]
+
+jobs:
+  push:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push'
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build Docker image
+        run: docker build --tag transitiveimage .
+
+      - name: Tag with commit hash
+        run: docker tag transitiveimage "$IMAGE_NAME:$GITHUB_SHA"; echo "${{ github.ref }}"
+
+      - name: Tag with latest in master
+        if: github.ref == 'refs/heads/master'
+        run: docker tag transitiveimage "$IMAGE_NAME:latest"
+
+      - name: Log into registry
+        run: >
+          echo "${{ secrets.REGISTRY_PASSWORD }}" |
+          docker login -u "${{ secrets.REGISTRY_USERNAME }}" --password-stdin
+
+      # This will push all the tags related to this image name
+      - name: Push image
+        run: docker push "$IMAGE_NAME"
