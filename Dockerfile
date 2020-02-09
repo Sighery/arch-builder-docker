@@ -23,6 +23,7 @@ RUN useradd -m builder && \
   echo 'builder ALL=(root) NOPASSWD:ALL' > /etc/sudoers.d/makepkg
 
 RUN printf "PKGDEST=/builds/output\n" >> /etc/makepkg.conf
+RUN printf 'PACKAGER="Sighery <sighery@sighery.com>"\n' >> /etc/makepkg.conf
 
 RUN mkdir -p /builds/output
 RUN chmod -R 777 /builds
