@@ -28,7 +28,7 @@ RUN printf 'PACKAGER="Sighery <sighery@sighery.com>"\n' >> /etc/makepkg.conf
 # Add my repo to fetch some dependencies that are AUR only which cause
 # makepkg to fail
 RUN pacman-key --init
-RUN pacman-key --keyserver pgp.mit.edu --recv-key \
+RUN pacman-key --keyserver eu.pool.sks-keyservers.net --recv-key \
 '9454 A24E 1B5E 9630 78B6  E931 7C02 D106 83AD CFB8'
 RUN pacman-key --lsign-key \
 '9454 A24E 1B5E 9630 78B6  E931 7C02 D106 83AD CFB8'
