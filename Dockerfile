@@ -29,9 +29,9 @@ RUN printf 'PACKAGER="Sighery <sighery@sighery.com>"\n' >> /etc/makepkg.conf
 # makepkg to fail
 RUN pacman-key --init
 RUN pacman-key --keyserver eu.pool.sks-keyservers.net --recv-key \
-'9454 A24E 1B5E 9630 78B6  E931 7C02 D106 83AD CFB8'
+'0x9454A24E1B5E963078B6E9317C02D10683ADCFB8'
 RUN pacman-key --lsign-key \
-'9454 A24E 1B5E 9630 78B6  E931 7C02 D106 83AD CFB8'
+'0x9454A24E1B5E963078B6E9317C02D10683ADCFB8'
 RUN printf \
 '[sighery-archrepo]\nServer = http://archrepo.sighery.com/$arch\n' \
 >> /etc/pacman.conf
