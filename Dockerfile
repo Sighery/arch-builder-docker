@@ -1,4 +1,4 @@
-FROM archlinux:20200407
+FROM archlinux:20200505
 
 RUN pacman -Sy
 RUN pacman -S --needed --noconfirm pacman-contrib
