@@ -41,6 +41,4 @@ RUN mkdir -p /builds/output
 RUN chmod -R 777 /builds
 WORKDIR /builds
 
-USER builder
-
 CMD ["/bin/bash"]
