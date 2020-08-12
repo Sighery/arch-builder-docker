@@ -1,0 +1,15 @@
+name: Rebuild
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Request rebuild
+        run: >
+          curl -X POST --silent --show-error --output /dev/null --fail
+          ${{ secrets.TRIGGER_URL }}
